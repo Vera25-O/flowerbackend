@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   post "/signup", to: "users#create"
   get "/me", to: "users#show"
-  
+
+  resources :flowers, only:[:index, :show, :delete, :patch]
   # Defines the root path route ("/")
   # root "articles#index"
 end
