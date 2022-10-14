@@ -10,7 +10,7 @@ class FlowersController < ApplicationController
     def update
         flower=Flower.find_by!(id:params[:id])
         flower.update!(description: params[:description],name: params[:name],image: params[:image])
-        render json: power, status: :accepted
+        render json: flower, status: :accepted
     end
 
 
