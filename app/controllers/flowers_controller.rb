@@ -12,6 +12,12 @@ class FlowersController < ApplicationController
         render json: flower, status: :ok
     end
 
+    def destroy
+        flower=flower.find( params[:id])
+        flower.destroy
+        head :no_content
+    end
+
     private
     def not_found_response
         render json: {error: "Flower not found"}, status: :not_found
