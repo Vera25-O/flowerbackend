@@ -8,7 +8,7 @@ class FlowersController < ApplicationController
     end
 
     def show
-        flower=Flower.find(params[:id])
+        flower=Flower.find_by(id:params[:id])
         render json: flower, status: :ok
     end
 
