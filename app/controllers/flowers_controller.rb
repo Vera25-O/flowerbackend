@@ -11,4 +11,9 @@ class FlowersController < ApplicationController
         flower=Flower.find_by!(id:params[:id])
         render json: flower, status: :ok
     end
+
+    private
+    def not_found_response
+        render json: {error: "Flower not found"}, status: :not_found
+    end
 end
