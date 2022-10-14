@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   post "/signup", to: "users#create"
   get "/me", to: "users#show"
 
-  resources :flowers, only:[:index, :show, :delete, :patch]
+  resources :flowers, only:[:index, :show, :delete, :patch, :create]
   # Defines the root path route ("/")
   # root "articles#index"
 end

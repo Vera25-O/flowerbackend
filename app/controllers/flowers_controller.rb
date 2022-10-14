@@ -1,8 +1,8 @@
 class FlowersController < ApplicationController
-    # def create 
-    #     hero=HeroPower.create!(hero_power_params)
-    #     render json: hero.power
-    # end
+    def create 
+        flower=Flower.create!(flower_params)
+        render json: flower
+    end
     def index
         render json: Flower.all, status: :ok
     end
@@ -19,6 +19,9 @@ class FlowersController < ApplicationController
     end
 
     private
+    def flower_params
+        params.permit(:name,:image,:description)
+    end
     def not_found_response
         render json: {error: "Flower not found"}, status: :not_found
     end

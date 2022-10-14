@@ -5,10 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-User.create(username: "Luke", password_digest: "vera25", flower_id: 1)
-User.create(username: "Jay", password_digest: "kyle34", flower_id: 2)
-User.create(username: "Wambo", password_digest: "kelly7", flower_id: 3)
-User.create(username: "Larry", password_digest:"joan78", flower_id: 4)
+User.create(username: "Luke", password_digest: "vera25")
+User.create(username: "Jay", password_digest: "kyle34")
+User.create(username: "Wambo", password_digest: "kelly7")
+User.create(username: "Larry", password_digest:"joan78")
 
 Flower.create(name: "Rose Flower",description: "Red romantic flower", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJB22Q5jAJwJWtjvQFYwdFew4PFo35WyRvLA&usqp=CAU")
 Flower.create(name: "Lily Flower",description: "The glorious flower", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyLGj0l3SB11Cz1PS1iEPRMavbh218w9jPcQ&usqp=CAU" )
