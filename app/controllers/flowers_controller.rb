@@ -20,7 +20,7 @@ class FlowersController < ApplicationController
     end
 
     def destroy
-        flower=flower.find_by!(id: params[:id])
+        flower=Flower.find_by(id: params[:id])
         flower.destroy
         head :no_content
     end
